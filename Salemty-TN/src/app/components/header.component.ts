@@ -51,6 +51,10 @@ import { CommonModule } from '@angular/common';
              class="nav-link">
             Profil
           </a>
+          <div class="auth-buttons">
+            <a routerLink="/signin" class="btn-signin">Se connecter</a>
+            <a routerLink="/signup" class="btn-signup">S'inscrire</a>
+          </div>
         </nav>
 
         <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-label]="'Menu'">
@@ -122,6 +126,44 @@ import { CommonModule } from '@angular/common';
       align-items: center;
     }
 
+    .auth-buttons {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-left: 1rem;
+    }
+
+    .btn-signin, .btn-signup {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-signin {
+      color: #E70013;
+      border: 1px solid #E70013;
+    }
+
+    .btn-signin:hover {
+      background-color: #E70013;
+      color: white;
+    }
+
+    .btn-signup {
+      background-color: #E70013;
+      color: white;
+    }
+
+    .btn-signup:hover {
+      background-color: #d90010;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(231, 0, 19, 0.3);
+    }
+
     .nav-link {
       color: #6b7280;
       text-decoration: none;
@@ -190,6 +232,21 @@ import { CommonModule } from '@angular/common';
         padding: 1rem 1.5rem;
         border-bottom: 1px solid #f0f0f0;
         width: 100%;
+      }
+
+      .auth-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-left: 0;
+        margin-top: 1rem;
+        padding: 0 1.5rem;
+        width: 100%;
+      }
+
+      .btn-signin, .btn-signup {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
       }
     }
   `]

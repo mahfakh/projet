@@ -6,6 +6,8 @@ import { PrevisionComponent } from './pages/previsions.component';
 import { PreventionComponent } from './pages/prevention.component';
 import { ProfilComponent } from './pages/profil.component';
 import { ContactComponent } from './pages/contact.component';
+import { SigninComponent } from './pages/signin.component';
+import { SignupComponent } from './pages/signup.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,5 +17,7 @@ export const routes: Routes = [
   { path: 'prevention', component: PreventionComponent },
   { path: 'profil', component: ProfilComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'signin', component: SigninComponent },
+  { path: 'signup', component: SignupComponent },
   { path: '**', redirectTo: '' }
 ];
